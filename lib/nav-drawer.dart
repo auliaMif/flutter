@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Galerry.dart' as galeri;
+import 'package:flutter_debugging/appbar/Galerry.dart';
 
 class DrawerWidget extends StatelessWidget {
   @override
@@ -9,10 +9,21 @@ class DrawerWidget extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           _drawerHeader(),
-          _drawerItem(icon: Icons.folder, text: 'My Files', onTap: () => DefaultTabController.of(context)?.animateTo(1)),
-          _drawerItem(icon: Icons.group, text: 'Shared with me', onTap: () => DefaultTabController.of(context)?.animateTo(2)),
-          _drawerItem(icon: Icons.access_time, text: 'Recent', onTap: () => DefaultTabController.of(context)?.animateTo(3)),
-          _drawerItem(icon: Icons.delete, text: 'Trash', onTap: () => DefaultTabController.of(context)?.animateTo(4)),
+          _drawerItem(
+              icon: Icons.folder,
+              text: 'My Files',
+              onTap: () {
+                DefaultTabController.of(context)?.animateTo(0);
+                Navigator.pop(context);
+              }),
+          _drawerItem(
+            //onTap: () => galeri.Galeri(),
+            icon: Icons.group,
+            text: 'Shared with me',
+            // onTap: () => print('Tap Shared menu')
+          ),
+          _drawerItem(icon: Icons.access_time, text: 'Recent', onTap: () => print('Tap Recent menu')),
+          _drawerItem(icon: Icons.delete, text: 'Trash', onTap: () => print('Tap Trash menu')),
           Divider(height: 25, thickness: 1),
           Padding(
             padding: const EdgeInsets.only(left: 20.0, top: 10, bottom: 10),
@@ -34,14 +45,14 @@ Widget _drawerHeader() {
     currentAccountPicture: ClipOval(
       child: Image(image: AssetImage('assets/aulia.jpg'), fit: BoxFit.cover),
     ),
-    otherAccountsPictures: [
-      ClipOval(
-        child: Image(image: AssetImage('assets/aulia.jpg'), fit: BoxFit.cover),
-      ),
-      ClipOval(
-        child: Image(image: AssetImage('assets/aulia.jpg'), fit: BoxFit.cover),
-      )
-    ],
+    // otherAccountsPictures: [
+    //   ClipOval(
+    //     child: Image(image: AssetImage('assets/images/orang1.jpg'), fit: BoxFit.cover),
+    //   ),
+    //   ClipOval(
+    //     child: Image(image: AssetImage('assets/images/orang3.jpeg'), fit: BoxFit.cover),
+    //   )
+    // ],
     accountName: Text('Aulia Mifta'),
     accountEmail: Text('auliamif009@gmail.com'),
   );
@@ -65,4 +76,34 @@ Widget _drawerItem({IconData? icon, required String text, GestureTapCallback? on
     ),
     onTap: onTap,
   );
+}
+
+class Galeri extends StatelessWidget {
+  final List<String> foto = [
+    'assets/ariana1.jpg',
+    'assets/ariana2.jpg',
+    'assets/ariana3.jpg'
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListView.builder(
+        itemCount: foto.length,
+        itemBuilder: (context, index) {
+          return Card(
+            child: ListTile(
+              title: ClipRRect(
+                  child: Image.asset(
+                foto[index],
+                width: 350,
+                height: 200,
+                fit: BoxFit.cover,
+              )),
+            ),
+          );
+        },
+      ),
+    );
+  }
 }

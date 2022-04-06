@@ -38,12 +38,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-  - assets/adele.jpg
-  - assets/ariana.jpg
-  - assets/bazzi.jpg
-  - assets/charlie puth.png
-  - assets/meghan trainor.jpg
-  - assets/sam smith.jpg
+  - assets/aulia.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

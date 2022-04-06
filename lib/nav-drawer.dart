@@ -31,7 +31,7 @@ class DrawerWidget extends StatelessWidget {
 Widget _drawerHeader() {
   return UserAccountsDrawerHeader(
     currentAccountPicture: ClipOval(
-      child: Image(image: AssetImage('assets/adele.jpg'), fit: BoxFit.cover),
+      child: Image(image: AssetImage('assets/aulia.jpg'), fit: BoxFit.cover),
     ),
     otherAccountsPictures: [
       ClipOval(

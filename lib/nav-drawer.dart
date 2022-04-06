@@ -12,7 +12,7 @@ class DrawerWidget extends StatelessWidget {
           _drawerItem(
             icon: Icons.folder,
             text: 'My Files',
-            onTap: () => onTap: () {
+            onTap: () {
               galeri.Galeri();
             },
           ),

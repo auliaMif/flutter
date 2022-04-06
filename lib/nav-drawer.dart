@@ -33,14 +33,14 @@ Widget _drawerHeader() {
     currentAccountPicture: ClipOval(
       child: Image(image: AssetImage('assets/aulia.jpg'), fit: BoxFit.cover),
     ),
-    otherAccountsPictures: [
-      ClipOval(
-        child: Image(image: AssetImage('assets/images/orang1.jpg'), fit: BoxFit.cover),
-      ),
-      ClipOval(
-        child: Image(image: AssetImage('assets/images/orang3.jpeg'), fit: BoxFit.cover),
-      )
-    ],
+    // otherAccountsPictures: [
+    //   ClipOval(
+    //     child: Image(image: AssetImage('assets/images/orang1.jpg'), fit: BoxFit.cover),
+    //   ),
+    //   ClipOval(
+    //     child: Image(image: AssetImage('assets/images/orang3.jpeg'), fit: BoxFit.cover),
+    //   )
+    // ],
     accountName: Text('Aulia Mifta'),
     accountEmail: Text('auliamif009@gmail.com'),
   );

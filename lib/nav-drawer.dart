@@ -16,12 +16,20 @@ class DrawerWidget extends StatelessWidget {
                 Navigator.pop(context);
               }),
           _drawerItem(
-            //onTap: () => galeri.Galeri(),
-            icon: Icons.group,
-            text: 'Shared with me',
-            // onTap: () => print('Tap Shared menu')
-          ),
-          _drawerItem(icon: Icons.access_time, text: 'Recent', onTap: () => print('Tap Recent menu')),
+              //onTap: () => galeri.Galeri(),
+              icon: Icons.group,
+              text: 'Shared with me',
+              onTap: () {
+                DefaultTabController.of(context)?.animateTo(1);
+                Navigator.pop(context);
+              }),
+          _drawerItem(
+              icon: Icons.access_time,
+              text: 'Recent',
+              onTap: () {
+                DefaultTabController.of(context)?.animateTo(2);
+                Navigator.pop(context);
+              }),
           _drawerItem(icon: Icons.delete, text: 'Trash', onTap: () => print('Tap Trash menu')),
           Divider(height: 25, thickness: 1),
           Padding(

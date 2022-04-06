@@ -9,17 +9,14 @@ class DrawerWidget extends StatelessWidget {
         children: <Widget>[
           _drawerHeader(),
           _drawerItem(
-            icon: Icons.folder,
-            text: 'My Files',
-            onTap: () => TabBarView(children: [
-              Center(
-                child: Tab(
-                  icon: Icon(Icons.collections),
-                  text: "Photos",
-                ),
-              )
-            ]),
-          ),
+              icon: Icons.folder,
+              text: 'My Files',
+              onTap: () => TabBar(tabs: [
+                    Tab(
+                      icon: Icon(Icons.collections),
+                      text: "Photos",
+                    )
+                  ])),
           _drawerItem(icon: Icons.group, text: 'Shared with me', onTap: () => print('Tap Shared menu')),
           _drawerItem(icon: Icons.access_time, text: 'Recent', onTap: () => print('Tap Recent menu')),
           _drawerItem(icon: Icons.delete, text: 'Trash', onTap: () => print('Tap Trash menu')),

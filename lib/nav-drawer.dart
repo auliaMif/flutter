@@ -30,7 +30,13 @@ class DrawerWidget extends StatelessWidget {
                 DefaultTabController.of(context)?.animateTo(2);
                 Navigator.pop(context);
               }),
-          _drawerItem(icon: Icons.delete, text: 'Trash', onTap: () => print('Tap Trash menu')),
+          _drawerItem(
+              icon: Icons.delete,
+              text: 'Trash',
+              onTap: () {
+                DefaultTabController.of(context)?.animateTo(3);
+                Navigator.pop(context);
+              }),
           Divider(height: 25, thickness: 1),
           Padding(
             padding: const EdgeInsets.only(left: 20.0, top: 10, bottom: 10),

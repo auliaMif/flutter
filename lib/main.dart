@@ -16,7 +16,7 @@ class NavigationDrawer extends StatelessWidget {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('Ariana Grande'),
+            title: Text('Dahsboard'),
             bottom: TabBar(
               tabs: [
                 new Tab(icon: new Icon(Icons.folder), text: "My Files"),

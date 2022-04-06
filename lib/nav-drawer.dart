@@ -41,8 +41,8 @@ Widget _drawerHeader() {
         child: Image(image: AssetImage('assets/images/orang3.jpeg'), fit: BoxFit.cover),
       )
     ],
-    accountName: Text('Belajar Flutter'),
-    accountEmail: Text('hallo@belajarflutter.com'),
+    accountName: Text('Aulia Mifta'),
+    accountEmail: Text('auliamif009@gmail.com'),
   );
 }
 

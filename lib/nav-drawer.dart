@@ -9,13 +9,7 @@ class DrawerWidget extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           _drawerHeader(),
-          _drawerItem(
-            icon: Icons.folder,
-            text: 'My Files',
-            onTap: () {
-              galeri.Galeri();
-            },
-          ),
+          _drawerItem(icon: Icons.folder, text: 'My Files', onTap: () => DefaultTabController.of(context)?.animateTo(1)),
           _drawerItem(icon: Icons.group, text: 'Shared with me', onTap: () => print('Tap Shared menu')),
           _drawerItem(icon: Icons.access_time, text: 'Recent', onTap: () => print('Tap Recent menu')),
           _drawerItem(icon: Icons.delete, text: 'Trash', onTap: () => print('Tap Trash menu')),

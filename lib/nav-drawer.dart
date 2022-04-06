@@ -12,13 +12,9 @@ class DrawerWidget extends StatelessWidget {
           _drawerItem(
             icon: Icons.folder,
             text: 'My Files',
-            onTap: () => TabBarView(
-              children: <Widget>[
-                //     new lagu.Songs(),
-                new galeri.Galeri(),
-                //    new video.Videos(),
-              ],
-            ),
+            onTap: () => onTap: () {
+              galeri.Galeri();
+            },
           ),
           _drawerItem(icon: Icons.group, text: 'Shared with me', onTap: () => print('Tap Shared menu')),
           _drawerItem(icon: Icons.access_time, text: 'Recent', onTap: () => print('Tap Recent menu')),

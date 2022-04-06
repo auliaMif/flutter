@@ -16,7 +16,7 @@ class NavigationDrawer extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('List Anime'),
+            title: Text('Ariana Grande'),
             bottom: TabBar(
               tabs: [
                 new Tab(icon: new Icon(Icons.folder), text: "My Files"),
@@ -29,7 +29,7 @@ class NavigationDrawer extends StatelessWidget {
           body: TabBarView(
             children: <Widget>[
               Galeri(),
-              Galeri(),
+              Share(),
               Galeri(),
             ],
           ),
